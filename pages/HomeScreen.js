@@ -8,7 +8,7 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.message}>Press the icon below to enter a new address for validation.</Text>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Address')}>
+        onPress={() => navigation.navigate('Enter Address')}>
         <Entypo name="location" size={48} color="black" />
       </TouchableOpacity>
       <StatusBar style="auto" />
