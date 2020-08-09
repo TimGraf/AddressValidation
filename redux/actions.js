@@ -33,7 +33,6 @@ const validateAddress = address => dispatch => {
     fetch(ADDRESS_URL, config)
         .then(r => r.json())
         .then(data => {
-            console.log(data);
             dispatch(validateAddressAction(
                 {
                     street: data.address_line1,
