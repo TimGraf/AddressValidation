@@ -1,20 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity, StyleSheet, View } from 'react-native';
+import { Entypo } from '@expo/vector-icons';
+import AddressDisplay from '../components/AddressDisplay';
 
-const ValidAddressScreen = ({ route, navigation }) => {
-    
-    const street = useSelector(state => state.street);
-    const city = useSelector(state => state.city);
-    const state = useSelector(state => state.state);
-    const zip = useSelector(state => state.zip);
-
+const ValidAddressScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text>{street}</Text>
-            <Text>{city}</Text>
-            <Text>{state}</Text>
-            <Text>{zip}</Text>
+            <AddressDisplay />
+            <TouchableOpacity
+              style={styles.icon}
+              onPress={() => navigation.navigate('Home')}>
+              <Entypo name="home" size={48} color="black" />
+            </TouchableOpacity>
         </View>
     );
 };
@@ -27,13 +24,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       flexDirection: 'column',
     },
-    input: { 
-        height: 60, 
-        width: 300, 
-        borderColor: 'gray', 
-        borderWidth: 1,
-        margin: 20,
-        padding: 10
+    icon: {
+      marginBottom: 80
     }
   });
 
