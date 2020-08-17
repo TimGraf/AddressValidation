@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export const AddressDisplay= () => {
+export const AddressDisplay = () => {
     // Setup navigation
     const navigation = useNavigation();
 
